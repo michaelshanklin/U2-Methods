@@ -1,25 +1,18 @@
 import javax.swing.*;
 
-public class ParameterExample {
+public class Scope{
 
-    public static void main(String[] args) {
-        area();
-        perimeter();
+    private int number = 12;
+    private int total;
+
+    public void addNumbers(){
+        int numberB = 4;
+        total = numberB + number;
     }
 
-    public static void area(){
-        double width = Double.parseDouble(JOptionPane.showInputDialog("What is the width?"));
-        double length = Double.parseDouble(JOptionPane.showInputDialog("What is the length"));
-
-        double area = width * length;
-        JOptionPane.showMessageDialog(null, "The area is " + area);
-    }
-
-    public static void perimeter(){
-        double width = Double.parseDouble(JOptionPane.showInputDialog("What is the width?"));
-        double length = Double.parseDouble(JOptionPane.showInputDialog("What is the length"));
-
-        double perimeter = 2 * width + 2 *  length;
-        JOptionPane.showMessageDialog(null, "The area is " + perimeter);
+    public void displayTotal(){
+        String numberB;
+        System.out.println("The total of " + number + " + " + numberB + " is " + total);
     }
 }
+
